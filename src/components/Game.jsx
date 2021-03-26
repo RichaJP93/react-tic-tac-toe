@@ -40,7 +40,7 @@ const Game = () => {
     <>
       <Board squares={board} onClick={handleClick} />
       <div style={style}>
-        <p>{winner ? 'Winner: ' + winner : status}</p>
+        <p>{winner ? 'Winner! ' + winner : status}</p>
         {renderMoves()}
       </div>
     </>
