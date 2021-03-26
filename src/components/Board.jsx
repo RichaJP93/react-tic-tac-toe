@@ -1,31 +1,27 @@
 import React from 'react';
 import Square from './Square';
 
-const Board = () => {
-
-  const status = 'Next player: X';
-  
-  return (
-    <div>
-      <div className="status">{status}</div>
-      <div className="board-row">
-        <Square number={1}/>
-        <Square number={2}/>
-        <Square number={3}/>
-      </div>
-      <div className="board-row">
-        <Square number={4}/>
-        <Square number={5}/>
-        <Square number={6}/>
-      </div>
-      <div className="board-row">
-        <Square number={7}/>
-        <Square number={8}/>
-        <Square number={9}/>
-      </div>
-    </div>
-  );
-  
+const style = {
+  border: '4px solid darkblue', 
+  borderRadius: '10px', 
+  width: '249px',
+  height: '330px',  
+  margin: '0 auto',
+  display: 'grid',
+  gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)'
 }
+
+const Board = ({squares, onClick}) => (
+
+  <div>    
+    <div style={style}>
+      {squares.map((square, i) => (
+        <Square key={i} number={square} onClick={() => onClick(i)}/>
+      ))}
+    </div>
+  </div>
+);
+  
+
 
 export default Board;
