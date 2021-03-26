@@ -28,11 +28,11 @@ const Game = () => {
     
   }
 
-  const renderMoves = () => {
-    return <button onClick={() => setBoard(Array(9).fill(null))}>
+  const renderMoves = () => (
+    <button onClick={() => setBoard(Array(9).fill(null))}>
       Start Game
     </button>
-  }
+  )
 
   const status = xIsNext ? 'Next player: X' : 'Next player: O';
 
