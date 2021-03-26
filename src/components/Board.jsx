@@ -11,10 +11,9 @@ const style = {
   gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)'
 }
 
-const Board = ({squares, onClick, status}) => (
+const Board = ({squares, onClick}) => (
 
-  <div>
-    <div>{status}</div>
+  <div>    
     <div style={style}>
       {squares.map((square, i) => (
         <Square key={i} number={square} onClick={() => onClick(i)}/>
