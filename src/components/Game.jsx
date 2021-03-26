@@ -2,10 +2,24 @@ import React from 'react';
 import Board from './Board';
 
 const Game = () => {
+  const handleClick = () => {
+
+  }
+
+  const jumpTo = () => {
+    
+  }
+
+  const renderMoves = () => {
+    
+  }
+
+  const status = 'Next player: X';
+
   return (
     <div className="game">
       <div className="game-board">
-        <Board />
+        <Board onClick={handleClick} status={status}/>
       </div>
       <div className="game-info">
         <div>{/* status */}</div>
