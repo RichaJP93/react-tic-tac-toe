@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Board from './components/Board';
+import Board from './Board';
 
 const Game = () => {
   return (
@@ -14,12 +12,7 @@ const Game = () => {
         <ol>{/* TODO */}</ol>
       </div>
     </div>
-  );  
+  );
 }
 
-// ========================================
-
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-);
+export default Game
