@@ -17,15 +17,7 @@ const Game = () => {
   const status = 'Next player: X';
 
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board onClick={handleClick} status={status}/>
-      </div>
-      <div className="game-info">
-        <div>{/* status */}</div>
-        <ol>{/* TODO */}</ol>
-      </div>
-    </div>
+    <Board onClick={handleClick} status={status}/>
   );
 }
 
